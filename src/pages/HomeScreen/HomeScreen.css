@@ -1,0 +1,262 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+.screen-backdrop {
+  width: 135%;
+  height: 24rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 50% 50%;
+  background-color: #edeaf0;
+  position: absolute;
+}
+
+.menu-button {
+  width: 2rem;
+  margin-left: 85px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.welcome {
+  margin: 10px;
+  margin-left: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome h1 {
+  font-size: 1.5rem;
+}
+
+.welcome p {
+  padding-top: 17px;
+  font-weight: 500;
+}
+
+.image {
+  flex-shrink: 0;
+  margin-right: 110px;
+}
+
+.backdrop {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333945;
+  margin-bottom: 1px;
+}
+
+.backdrop img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.categories-wrapper {
+  flex: 1;
+  padding: 0 90px;
+  padding-bottom: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.categories {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  background: #a4b0bd;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 10px 20px 5px #00000023;
+  transition: all 0.3s;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Ensure it's above any other content */
+}
+
+/* Hover effect for category */
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px 5px #00000040;
+  background: #e0e0e0;
+}
+
+.category .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items horizontally */
+  gap: 0.5rem; /* Space between items */
+}
+
+.category .left img {
+  width: 3rem; /* Size of the image */
+}
+
+.category .left h1 {
+  font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
+}
+
+.category .left p {
+  color: #2e2e2e;
+  font-size: 1rem;
+  opacity: 0.6;
+  margin: 0; /* Remove default margin */
+}
+
+.category .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; /* Width of the toggle button */
+  height: 2rem; /* Height of the toggle button */
+  cursor: pointer;
+  background: transparent; /* Ensure background is transparent if needed */
+}
+
+.toggle-btn svg {
+  width: 100%; /* Full width of the toggle button */
+  height: 100%; /* Full height of the toggle button */
+  stroke: #5d4a66; /* Color of the SVG stroke */
+}
+.category .options {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.category:hover .options {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*add task*/
+
+.add-task-bt {
+  position: fixed;
+  top: 39rem;
+  right: 5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #78cdd7;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.add-task-bt:hover {
+  transform: scale(1.1);
+}
+.add-active svg {
+  transition: transform 0.3s;
+  transform: rotate(45deg);
+  color: rgb(0, 22, 44);
+}
+
+.add-task-bt svg {
+  width: 2rem;
+  transition: transform 0.3s;
+}
+
+.add-tasks {
+  position: absolute;
+  top: 80%;
+  left: 73px;
+  width: 100%;
+  padding: 20px 30px;
+  z-index: 1;
+  filter: blur(0.1px);
+}
+
+.add-tasks .headings {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.input-groups input,
+.input-groups select {
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #695353;
+  padding: 10px;
+  font-size: 16px;
+}
+.input-groups label,
+.input-groups option {
+  display: flex;
+  width: max-content;
+  padding: 0 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.add-button {
+  display: flex;
+  gap: 1rem;
+  margin-top: 22px;
+}
+
+.add-button .cancel-buttons {
+  padding: 5px 15px;
+  border-radius: 5px;
+  height: 28px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.add-buttn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  height: auto; /* Remove fixed height for better responsiveness */
+  border: none;
+  outline: none;
+
+  height: 28px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active-task svg {
+  transition: transform 0.3s;
+  transform: rotate(45deg);
+  color: rgb(0, 22, 44);
+}
+
+.add-button .add-buttn:hover {
+  background-color: #85e2f9;
+}
+.add-button .cancel-buttons:hover {
+  background-color: #dba59d;
+}
+
+/* When add-task is visible */
+.blur {
+  filter: blur(5px);
+}

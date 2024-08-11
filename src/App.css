@@ -1,0 +1,58 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: #2e2e2e;
+  background-color: #2e5266;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  scroll-behavior: smooth;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+  .wrapper {
+    border: 8px solid #2e2e2e;
+    border-radius: 45px;
+    height: 46rem;
+    width: 25rem;
+    overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .wrapper {
+    height: 45rem;
+    width: 25rem;
+    border-radius: 45px;
+    border: 10px solid #2e2e2e;
+    overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}

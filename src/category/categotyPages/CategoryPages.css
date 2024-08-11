@@ -1,0 +1,280 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+.screen-backdrop-category {
+  width: 125%;
+  height: 16rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 50% 50%;
+  background-color: #eaf0f1;
+  position: absolute;
+}
+
+.screen-container-category {
+  position: relative;
+
+  padding-top: 2rem;
+}
+
+.back-button {
+  width: 2rem;
+  margin-left: 85px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.welcome-category {
+  margin: 70px;
+  margin-left: 85px;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-category h1 {
+  font-size: 1.5rem;
+}
+
+.welcome-category p {
+  font-weight: 500;
+}
+
+.image-category {
+  flex-shrink: 0;
+  margin-right: 10px; /* Reduced the margin for less space between image and text */
+}
+
+.content-category {
+  display: flex;
+  flex-direction: column;
+  margin-right: 160px;
+}
+
+.backdrop-category {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dae0e2;
+  margin-bottom: 1px;
+}
+
+.backdrop-category img {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* tasks */
+.tasks-wrapper {
+  padding: 0 110px;
+  margin-top: 1rem;
+  height: calc(100% - 12rem);
+  padding-bottom: 20px;
+  overflow: auto;
+}
+
+.tasks {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+
+.task {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #eaf0f1;
+
+  cursor: pointer;
+}
+
+.task input {
+  display: none;
+}
+
+.task .checkmark {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2px;
+  border: 1px solid #eaf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task .checkmark svg {
+  width: 1rem;
+  color: #eaf0f1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.task:hover .checkmark svg {
+  opacity: 1;
+}
+
+.task .checkmark svg path {
+  stroke-width: 3;
+}
+
+.task-wrapper .delete {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  color: rgb(132, 43, 43);
+
+  cursor: pointer;
+  opacity: 0;
+}
+
+.task-wrapper:hover .delete {
+  opacity: 1;
+  color: #2e2e2e;
+  background-color: #eaf0f1;
+}
+
+@media only screen and (max-width: 600px) {
+  .task-wrapper .delete {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: rgb(132, 43, 43);
+
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .task-wrapper:hover .delete {
+    opacity: 1;
+    color: #2e2e2e;
+    background-color: #eaf0f1;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .task-wrapper .delete {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: rgb(132, 43, 43);
+
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .task-wrapper:hover .delete {
+    opacity: 1;
+    color: #2e2e2e;
+    background-color: #eaf0f1;
+  }
+}
+
+/*add task*/
+
+.add-task-btn {
+  position: absolute;
+  top: 39rem;
+  right: 4rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #85e2f9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-task-btn:hover {
+  transform: scale(1.1);
+}
+.add-active svg {
+  transition: transform 0.3s;
+  transform: rotate(45deg);
+  color: rgb(0, 22, 44);
+}
+
+.add-task-btn svg {
+  width: 2rem;
+  transition: transform 0.3s;
+}
+
+.add-task {
+  position: absolute;
+  top: 150%;
+  left: 73px;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.add-task .heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: rgb(247, 219, 219);
+}
+
+.input-group input,
+.input-group select {
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #695353;
+  padding: 10px;
+  font-size: 16px;
+}
+.input-group label,
+.input-group option {
+  display: flex;
+  width: max-content;
+  padding: 0 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.add-buttons {
+  display: flex;
+  gap: 1rem;
+  padding-top: 25px;
+  padding-right: 292px;
+}
+
+.add-buttons .cancel-btn,
+.add-btn {
+  padding: 5px 15px;
+  border-radius: 5px;
+  height: 28px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+
+  font-size: 14px;
+}
+.add-btn .add-btn:hover {
+  background-color: #85e2f9;
+}
+.add-btn .cancel-btn:hover {
+  background-color: #dba59d;
+}
+
+/* When add-task is visible */
+.blur {
+  filter: blur(5px);
+}
